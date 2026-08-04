@@ -19,17 +19,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
+    <head>
+      <link rel="manifest" href="/manifest.json" />
+    </head>
       <body>
         <ThemeProvider>
           <LangProvider>
             <Header />
-
             {children}
-
             <Footer />
           </LangProvider>
         </ThemeProvider>
       </body>
-    </html>
+   </html>
   );
 }

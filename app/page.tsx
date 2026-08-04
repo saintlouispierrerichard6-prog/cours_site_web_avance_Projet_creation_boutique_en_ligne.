@@ -1,18 +1,21 @@
-
+  
+"use client";
+import { useEffect } from "react";
 import AfficherHero from "../components/Hero";
 import AfficherProduitsPopulaires from "../components/Products";
-  
-export default function Home(){
 
-  return(
+export default function Home() {
 
-      <main>
+  useEffect(() => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js");
+    }
+  }, []);
 
-           <AfficherHero/>
-
-            <AfficherProduitsPopulaires/>
-         
-      </main>
+  return (
+    <main>
+      <AfficherHero />
+      <AfficherProduitsPopulaires />
+    </main>
   );
-
 }

@@ -74,6 +74,24 @@
     
 }
 
+.downloadBtn {
+  background-color: var(--menu-bg);
+  color: var(--menu-text);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid var(--active-border);
+  transition: 0.3s ease;
+}
+
+.downloadBtn:hover {
+  transform: scale(1.08);
+  background-color: var(--active-border);
+  color: white;
+}
+
+
 
 /* Tablette */
 @media (max-width: 1024px) {
